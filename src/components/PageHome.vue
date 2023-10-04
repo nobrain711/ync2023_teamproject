@@ -1,30 +1,30 @@
 <template>
-	<div class="image_slider" slideWidth="100%">
-		<carousel :items-to-show="1" :wrapAround="true" :autoplay="5000">
-			<slide v-for="slide in items[0].menus" :key="slide">
-				<div class="carousel__item">
-					<figure>
-						<img :src="slide.image" :alt="slide.alt" />
-						<figcaption>
-							<em>{{ slide.caption }}</em
-							><span>{{ slide.description }}</span>
-						</figcaption>
-					</figure>
-				</div>
-			</slide>
-
-			<template #addons>
-				<navigation />
-				<pagination />
-			</template>
-		</carousel>
-	</div>
+	<Carousel :itemsToShow="1" :wrapAround="true" :autoplay="2000">
+		<Slide v-for="slide in slides" :key="slide">
+			<div class="carousel__item">
+				<img class="slideImg" :src="slide" />
+			</div>
+		</Slide>
+		<template #addons>
+			<navigation />
+			<Pagination />
+		</template>
+		...
+	</Carousel>
 </template>
-<script>
-import 'vue3-carousel/dist/carousel.css';
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
-export default {
+<script>
+import { defineComponent } from 'vue';
+import { Carousel, Pagination, Slide, Navigation } from 'vue3-carousel';
+
+import 'vue3-carousel/dist/carousel.css';
+
+import slider1 from '../assets/images/slider1.jpg';
+import slider2 from '../assets/images/slider2.jpg';
+import slider3 from '../assets/images/slider3.jpg';
+
+export default defineComponent({
+	name: 'AutoPlay',
 	components: {
 		Carousel,
 		Slide,
@@ -32,32 +32,28 @@ export default {
 		Navigation,
 	},
 	data() {
-		[
-			{
-				title: 'Carousel Slider',
-				description: 'Carousel를 이용한 이미지 슬라이드 효과',
-				menus: [
-					{
-						image: require('../assets/images/slider1.jpg'),
-						alt: 'image1',
-						caption: 'Responsive Site',
-						description: '이미지 슬라이드 1',
-					},
-					{
-						image: require('../assets/images/slider2.jpg'),
-						alt: 'image1',
-						caption: 'Responsive Site',
-						description: '이미지 슬라이드 2',
-					},
-					{
-						image: require('../assets/images/slider3.jpg'),
-						alt: 'image1',
-						caption: 'Responsive Site',
-						description: '이미지 슬라이드 3',
-					},
-				],
-			},
-		];
+		return {
+			slides: [slider1, slider2, slider3],
+		};
 	},
-};
+});
 </script>
+
+<style>
+section.carousel {
+	width: 800px;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.carousel__slide {
+	padding: 20px;
+}
+
+.carousel__prev,
+.carousel__next {
+	color: white;
+	height: 100%;
+	margin: 0 0 0 0;
+}
+</style>
