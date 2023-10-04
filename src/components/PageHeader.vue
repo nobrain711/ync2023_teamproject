@@ -30,56 +30,12 @@
 							<a class="nav-link" href="#">News</a>
 						</li>
 						<!-- Nav item 2 Game Drop -->
-						<li class="nav-item dropdown">
-							<a
-								class="nav-link dropdown-toggle"
-								href="#"
-								id="pagesMenu"
-								data-bs-toggle="dropdown"
-								aria-haspopup="true"
-								aria-expanded="false"
-								>Games</a
-							>
-							<ul class="dropdown-menu" aria-labelledby="pagesMenu">
-								<!-- Dropdown submenu -->
-								<li class="dropdown-submenu dropend">
-									<a class="dropdown-item dropdown-toggle" href="#">플랫폼</a>
-									<ul
-										class="dropdown-menu dropdown-menu-start"
-										data-bs-popper="none"
-									>
-										<li><a class="dropdown-item" href="#">스팀</a></li>
-										<li><a class="dropdown-item" href="#">PS</a></li>
-										<li><a class="dropdown-item" href="#">XBOX</a></li>
-									</ul>
-								</li>
-								<!-- Dropdown submenu -->
-								<li class="dropdown-submenu dropend">
-									<a class="dropdown-item dropdown-toggle" href="#">장르</a>
-									<ul
-										class="dropdown-menu dropdown-menu-start"
-										data-bs-popper="none"
-									>
-										<li><a class="dropdown-item" href="#">FPS</a></li>
-										<li><a class="dropdown-item" href="#">RPG</a></li>
-										<li><a class="dropdown-item" href="#">레이싱게임</a></li>
-									</ul>
-								</li>
-								<!--  -->
-								<li class="dropdown-submenu dropend">
-									<a class="dropdown-item dropdown-toggle" href="#">상점</a>
-									<ul
-										class="dropdown-menu dropdown-menu-start"
-										data-bs-popper="none"
-									>
-										<li><a class="dropdown-item" href="#">스팀</a></li>
-										<li><a class="dropdown-item" href="#">오리진</a></li>
-										<li><a class="dropdown-item" href="#">레이싱게임</a></li>
-									</ul>
-								</li>
-							</ul>
+						<li class="nav-item">
+							<a class="nav-link" href="#.html">Games</a>
+
+							<!-- Nav item 3 Forum -->
 						</li>
-						<!-- Nav item 3 Forum -->
+
 						<li class="nav-item">
 							<a class="nav-link" href="#.html">Forum</a>
 						</li>
@@ -126,8 +82,8 @@
 				</div>
 			</div>
 		</nav>
+		<div class="border-bottom border-2 border-primary opacity-1"></div>
 	</header>
-	<div class="border-bottom border-2 border-primary opacity-1"></div>
 </template>
 
 <style scoped>

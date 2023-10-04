@@ -1,37 +1,63 @@
 <template>
-	<div>
-		<carousel
-			:perPageCustom="[
-				[0, 1],
-				[576, 2],
-				[1200, 3],
-			]"
-		>
-			<!-- 이미지 슬라이드 아이템 -->
-			<slide v-for="(image, index) in images" :key="index">
-				<img :src="image" alt="Slide Image" />
+	<div class="image_slider" slideWidth="100%">
+		<carousel :items-to-show="1" :wrapAround="true" :autoplay="5000">
+			<slide v-for="slide in items[0].menus" :key="slide">
+				<div class="carousel__item">
+					<figure>
+						<img :src="slide.image" :alt="slide.alt" />
+						<figcaption>
+							<em>{{ slide.caption }}</em
+							><span>{{ slide.description }}</span>
+						</figcaption>
+					</figure>
+				</div>
 			</slide>
+
+			<template #addons>
+				<navigation />
+				<pagination />
+			</template>
 		</carousel>
 	</div>
 </template>
-
 <script>
-import VueCarousel from 'vue-carousel';
+import 'vue3-carousel/dist/carousel.css';
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
 export default {
 	components: {
-		Carousel: VueCarousel.Carousel,
-		Slide: VueCarousel.Slide,
+		Carousel,
+		Slide,
+		Pagination,
+		Navigation,
 	},
 	data() {
-		return {
-			images: [
-				'../assets/images/slider1.jpg',
-				'../assets/images/slider2.jpg',
-				'../assets/images/slider3.jpg',
-				// 이미지 URL을 원하는 수만큼 추가하세요.
-			],
-		};
+		[
+			{
+				title: 'Carousel Slider',
+				description: 'Carousel를 이용한 이미지 슬라이드 효과',
+				menus: [
+					{
+						image: require('../assets/images/slider1.jpg'),
+						alt: 'image1',
+						caption: 'Responsive Site',
+						description: '이미지 슬라이드 1',
+					},
+					{
+						image: require('../assets/images/slider2.jpg'),
+						alt: 'image1',
+						caption: 'Responsive Site',
+						description: '이미지 슬라이드 2',
+					},
+					{
+						image: require('../assets/images/slider3.jpg'),
+						alt: 'image1',
+						caption: 'Responsive Site',
+						description: '이미지 슬라이드 3',
+					},
+				],
+			},
+		];
 	},
 };
 </script>
