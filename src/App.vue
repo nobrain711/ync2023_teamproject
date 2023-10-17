@@ -11,7 +11,7 @@
 <script>
 import PageHeader from '@/components/PageHeader';
 import PageFooter from '@/components/PageFooter';
-import PageHome from '@/components/PageHome';
+import PageHome from '@/views/PageHome';
 
 export default {
 	name: 'App',
