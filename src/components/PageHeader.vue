@@ -2,46 +2,30 @@
 	<header>
 		<nav class="navbar navbar-expand-lg">
 			<div class="container">
-				<a class="navbar-brand" href="#">
+				<router-link :to="'/'">
 					<img
 						class="navbar-brand-item light-mode-item"
 						src="../assets/images/logo.svg"
 						alt="logo"
 					/>
-				</a>
-				<!-- 반응형인데 어케쓰는질 모르겠숴요
-				<button
-					class="navbar-toggler ms-auto"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarCollapse"
-					aria-controls="navbarCollapse"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="text-body h6 d-none d-sm-inline-block">Menu</span>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-        -->
-				<div class="collapse navbar-collapse" id="navbarCollapse">
-					<ul class="navbar-nav navbar-nav-scroll mx-auto">
+				</router-link>
+				<div class="parents">
+					<span>
 						<!-- Nav item 1 News -->
-						<li class="nav-item">
-							<a class="nav-link" href="#">News</a>
-						</li>
-						<!-- Nav item 2 Game Drop -->
-						<li class="nav-item">
-							<a class="nav-link" href="#.html">Games</a>
-						</li>
-						<!-- Nav item 3 Forum -->
-						<li class="nav-item">
-							<a class="nav-link" href="#.html">Forum</a>
-						</li>
-						<!-- Nav item 4 Us-->
-						<li class="nav-item">
-							<a class="nav-link" href="#.html">About us</a>
-						</li>
-					</ul>
+						<router-link :to="'News'">News</router-link>
+					</span>
+					<!-- Nav item 2 Game -->
+					<span>
+						<router-link :to="'Games'">Games</router-link>
+					</span>
+					<!-- Nav item 3 Forum -->
+					<span>
+						<router-link :to="'Forum'">Forum</router-link>
+					</span>
+					<!-- Nav item 4 Us-->
+					<span>
+						<router-link :to="'About'">About</router-link>
+					</span>
 				</div>
 				<div class="nav flex-nowrap align-items-center">
 					<!-- Nav Button -->
@@ -61,7 +45,7 @@
 							<i class="bi bi-search fs-4"> </i>
 						</a>
 						<div
-							class="dropdown-menu dropdown-menu-end shadow rounded p-2"
+							class="dropdown-menu dropdown-menu-end shadow rounded p-0"
 							aria-labelledby="navSearch"
 						>
 							<form class="input-group">
@@ -83,3 +67,25 @@
 		<div class="border-bottom border-2 border-primary opacity-1"></div>
 	</header>
 </template>
+<script>
+export default {
+	name: 'PageHeader',
+};
+</script>
+
+<style scoped>
+.parent {
+	width: 90%;
+	margin: 10px auto;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(0, 119, 255);
+}
+span {
+	padding-right: 30px;
+	margin-right: 0px;
+	background: none;
+}
+</style>

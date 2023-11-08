@@ -17,7 +17,15 @@ module.exports = {
 		'vue/multi-word-component-names': [
 			'error',
 			{
-				ignores: ['Header', 'Card', 'List'],
+				ignores: [
+					'Header',
+					'Card',
+					'List',
+					'News',
+					'Forum',
+					'About',
+					'GameRank',
+				],
 			},
 		],
 		'prettier/prettier': [

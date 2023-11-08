@@ -1,7 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-// import router from './router';
-import store from './store';
+import { router } from './router/index.js';
 
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,5 +12,5 @@ import axios from 'axios';
 
 const app = createApp(App);
 
-app.use(store).mount('#app');
+app.use(router).mount('#app');
 app.config.globalProperties.axios = axios;

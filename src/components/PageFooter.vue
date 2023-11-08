@@ -18,7 +18,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+	name: 'PageFooter',
+};
 </script>
 
 <style scoped>

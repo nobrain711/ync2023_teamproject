@@ -1,16 +1,31 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import PageHome from '@/views/PageHome.vue';
-import PageGame from '@/views/PageGame.vue';
-
-const routers = [
-	{ Path: '/', component: PageHome },
-	{ Path: '/game', component: PageGame },
+// 라우터 생성
+const routes = [
+	{
+		path: '/',
+		component: () => import('@/views/PageHome'),
+	},
+	{
+		path: '/main',
+		component: () => import('@/views/PageHome'),
+	},
+	{
+		path: '/News',
+		component: () => import('@/views/News'),
+	},
+	{
+		path: '/Forum',
+		component: () => import('@/views/Forum'),
+	},
+	{
+		path: '/About',
+		component: () => import('@/views/About'),
+	},
 ];
 
-const router = createRouter({
+// 라우터 추출 (main.js에서 import)
+export const router = createRouter({
 	history: createWebHistory(),
-	routers,
+	routes,
 });
-
-export default router;
