@@ -3,10 +3,12 @@
 		<div class="title">최신 게시글</div>
 		<div class="articles">
 			<ul>
-				<li v-for="post in posts" :key="post.id">
-					<router-link style="text-decoration: none" :to="'/post/' + post.id">{{
-						post.title
-					}}</router-link>
+				<li v-for="post1 in posts1" :key="post1.id">
+					<router-link
+						style="text-decoration: none"
+						:to="'/post/' + post1.id"
+						>{{ post1.title }}</router-link
+					>
 				</li>
 			</ul>
 		</div>
@@ -15,10 +17,12 @@
 		<div class="title2">인기 게시글</div>
 		<div class="articles2">
 			<ul>
-				<li v-for="post in posts" :key="post.id">
-					<router-link style="text-decoration: none" :to="'/post/' + post.id">{{
-						post.title
-					}}</router-link>
+				<li v-for="post2 in posts2" :key="post2.id">
+					<router-link
+						style="text-decoration: none"
+						:to="'/post/' + post2.id"
+						>{{ post2.title }}</router-link
+					>
 				</li>
 			</ul>
 		</div>
@@ -33,21 +37,26 @@ export default {
 		};
 	},
 	created() {
-		// 여기에서 실제 API 호출을 통해 게시글 데이터를 가져오는 코드를 작성해야 합니다.
-		this.posts = [
+		// 여기에서 실제 API 호출을 통해 게시글 데이터를 가져오는 코드를 작성
+		this.posts1 = [
 			{ id: 1, title: '첫 번째 게시물' },
 			{ id: 2, title: '두 번째 게시물' },
 			{ id: 3, title: '세 번째 게시물' },
 			{ id: 4, title: '네 번째 게시물' },
 			{ id: 5, title: '다섯 번째 게시물' },
 		];
+		this.posts2 = [
+			{ id: 1, title: '인기 첫 번째 게시물' },
+			{ id: 2, title: '인기 두 번째 게시물' },
+			{ id: 3, title: '인기 세 번째 게시물' },
+			{ id: 4, title: '인기 네 번째 게시물' },
+			{ id: 5, title: '인기 다섯 번째 게시물' },
+		];
 	},
 };
 </script>
 
 <style scoped>
-/* 스타일을 컴포넌트 내에서 정의할 때 'scoped' 속성을 사용하면 해당 컴포넌트에서만 스타일이 적용됩니다. */
-
 ul {
 	list-style: none;
 	padding: 0;
@@ -102,5 +111,6 @@ li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: 2%;
 }
 </style>

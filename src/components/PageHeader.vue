@@ -29,9 +29,17 @@
 				</div>
 				<div class="nav flex-nowrap align-items-center">
 					<!-- Nav Button -->
-					<div class="nav-item d-none d-md-block">
+					<template v-if="!isLoggedIn">
 						<a href="signin.html" class="btn">Login / Join</a>
-					</div>
+					</template>
+					<template v-else>
+						<img
+							src="../assets/images/usericon.png"
+							style="width: 50px; height: 50px"
+							alt="사용자 아이콘"
+							class="user-icon"
+						/>
+					</template>
 					<!-- Nav Search -->
 					<div class="nav-item dropdown dropdown-toggle-icon-none nav-search">
 						<a
@@ -70,6 +78,11 @@
 <script>
 export default {
 	name: 'PageHeader',
+	data() {
+		return {
+			isLoggedIn: false,
+		};
+	},
 };
 </script>
 
