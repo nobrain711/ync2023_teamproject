@@ -6,6 +6,7 @@
 					<img
 						class="navbar-brand-item light-mode-item"
 						src="../assets/images/logo.svg"
+						style="width: 20vw"
 						alt="logo"
 					/>
 				</router-link>
@@ -20,11 +21,11 @@
 					</span>
 					<!-- Nav item 3 Forum -->
 					<span>
-						<router-link :to="'Forum'">Forum</router-link>
+						<router-link :to="'Sale'">Sale</router-link>
 					</span>
 					<!-- Nav item 4 Us-->
 					<span>
-						<router-link :to="'About'">About</router-link>
+						<router-link :to="'Mail'">Mail</router-link>
 					</span>
 				</div>
 				<div class="nav flex-nowrap align-items-center">
@@ -35,7 +36,7 @@
 					<template v-else>
 						<img
 							src="../assets/images/usericon.png"
-							style="width: 50px; height: 50px"
+							style="width: 3vw"
 							alt="사용자 아이콘"
 							class="user-icon"
 						/>
@@ -80,16 +81,19 @@ export default {
 	name: 'PageHeader',
 	data() {
 		return {
-			isLoggedIn: false,
+			isLoggedIn: true,
 		};
 	},
 };
 </script>
 
 <style lang="scss" scoped>
-.parent {
-	width: 90%;
-	margin: 10px auto;
+.container {
+	width: 100vw;
+	height: 10vh;
+}
+.parents {
+	margin: 0 auto;
 }
 
 a {
@@ -97,7 +101,7 @@ a {
 	color: rgb(0, 119, 255);
 }
 span {
-	padding-right: 30px;
+	padding-right: 3vw;
 	margin-right: 0px;
 	background: none;
 }

@@ -25,6 +25,8 @@ module.exports = {
 					'Forum',
 					'About',
 					'GameRank',
+					'Mail',
+					'Sale',
 				],
 			},
 		],

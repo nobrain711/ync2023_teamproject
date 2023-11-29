@@ -15,12 +15,12 @@ const routes = [
 		component: () => import('@/views/News'),
 	},
 	{
-		path: '/Forum',
-		component: () => import('@/views/Forum'),
+		path: '/Sale',
+		component: () => import('@/views/Sale'),
 	},
 	{
-		path: '/About',
-		component: () => import('@/views/About'),
+		path: '/Mail',
+		component: () => import('@/views/Mail'),
 	},
 ];
 

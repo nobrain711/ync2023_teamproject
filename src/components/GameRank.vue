@@ -56,10 +56,10 @@ export default {
 </script>
 
 <style lang="scss">
-title {
+.title {
 	margin-top: 10px;
 }
-ranknum {
+.ranknum {
 	color: blue;
 }
 </style>

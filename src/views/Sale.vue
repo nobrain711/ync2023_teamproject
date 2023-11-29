@@ -1,8 +1,9 @@
 <template>
-	<div>forum</div>
+	<div></div>
 </template>
+
 <script>
 export default {
-	name: 'Forum',
+	name: 'Sale',
 };
 </script>

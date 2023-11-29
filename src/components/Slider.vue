@@ -1,5 +1,5 @@
 <template>
-	<Carousel :itemsToShow="1" :wrapAround="true" :autoplay="2000">
+	<Carousel :itemsToShow="1" :wrapAround="true" :autoplay="5000">
 		<Slide v-for="slide in slides" :key="slide">
 			<div class="carousel__item">
 				<img class="slideImg" :src="slide" />
@@ -41,7 +41,6 @@ export default {
 <style lang="scss">
 section.carousel {
 	width: 600px;
-	justify-content: center;
 	margin: 0 auto;
 	margin-bottom: 60px;
 	margin-top: 60px;

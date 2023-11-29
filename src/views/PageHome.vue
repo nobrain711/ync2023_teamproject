@@ -34,10 +34,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.wrap {
-	justify-content: center;
-	float: none;
-}
 .left-menu {
 	float: left; /* 왼쪽으로 정렬 */
 	margin-left: 10%;
