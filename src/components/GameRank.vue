@@ -55,11 +55,11 @@ export default {
 };
 </script>
 
-<style>
-.title {
+<style lang="scss">
+title {
 	margin-top: 10px;
 }
-.ranknum {
+ranknum {
 	color: blue;
 }
 </style>

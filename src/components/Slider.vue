@@ -38,7 +38,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 section.carousel {
 	width: 600px;
 	justify-content: center;

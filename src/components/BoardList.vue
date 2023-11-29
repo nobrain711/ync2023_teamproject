@@ -56,7 +56,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 ul {
 	list-style: none;
 	padding: 0;
@@ -69,39 +69,23 @@ li {
 	border-bottom: 1px solid #ddd;
 }
 
-.post {
-	text-decoration: none; /* 링크 밑줄 제거 */
-	color: #333; /* 링크 텍스트 색상 설정 */
+.post,
+.post2 {
+	text-decoration: none;
+	color: #333;
 	width: 600px;
 	border: 1px solid #ddd;
 	border-radius: 15px;
 	background-color: white;
 	margin-bottom: 3%;
 }
-.post2 {
-	text-decoration: none; /* 링크 밑줄 제거 */
-	color: #333; /* 링크 텍스트 색상 설정 */
-	width: 600px;
-	border: 1px solid #ddd;
-	border-radius: 15px;
-	background-color: white;
-}
-.articles {
-	text-align: left;
-}
+
+.articles,
 .articles2 {
 	text-align: left;
 }
-.title {
-	border: 1px solid #ddd;
-	width: 100px;
-	height: 30px;
-	font-size: 13px;
-	color: #333;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+
+.title,
 .title2 {
 	border: 1px solid #ddd;
 	width: 100px;

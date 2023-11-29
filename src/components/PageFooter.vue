@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .wrap-container {
 	height: auto;
 	min-height: 100%;

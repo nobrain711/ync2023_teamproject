@@ -33,7 +33,7 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style lang="scss">
 .wrap {
 	justify-content: center;
 	float: none;
